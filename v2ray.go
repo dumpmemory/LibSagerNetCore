@@ -112,7 +112,7 @@ func (instance *V2RayInstance) QueryStats(tag string, direct string) int64 {
 	if instance.statsManager == nil {
 		return 0
 	}
-	counter := instance.statsManager.GetCounter(fmt.Sprintf("outbound>>>%s>>>traffic>>>%s", tag, direct))
+	counter := instance.statsManager.GetCounter(fmt.Sprintf("out>>>%s>>>traffic>>>%s", tag, direct))
 	if counter == nil {
 		return 0
 	}
